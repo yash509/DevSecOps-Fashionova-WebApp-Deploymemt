@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: countrybank-blue
+  name: fashionova-blue
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: countrybank
+      app: fashionova
       version: blue
   template:
     metadata:
       labels:
-        app: countrybank
+        app: fashionova
         version: blue
     spec:
       containers:
-      - name: countrybank
-        image: yash5090/countrybank:blue # Adjust the image tag for the blue version
+      - name: fashionova
+        image: yash5090/fashionova:blue # Adjust the image tag for the blue version
         ports:
         - containerPort: 3000
         # env:
         # - name: SPRING_DATASOURCE_URL
-        #   value: jdbc:mysql://mysql-service:3306/countrybankdb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+        #   value: jdbc:mysql://mysql-service:3306/fashionovadb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
         # - name: SPRING_DATASOURCE_USERNAME
         #   value: root
         # - name: SPRING_DATASOURCE_PASSWORD
