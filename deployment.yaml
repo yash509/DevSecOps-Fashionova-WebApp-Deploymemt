@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: fashionova-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: fashionova
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: fashionova
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: fashionova
+        image: yash5090/fashionova:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
