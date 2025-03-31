@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pe-wa-pvc
+  name: fashionova-pvc
 spec:
   accessModes:
     - ReadWriteOnce
